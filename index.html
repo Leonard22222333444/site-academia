@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Fitness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+        .full-height {
+            height: 100vh; /* Define altura de 100% da altura da tela */
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+        }
+        .full-height h2 {
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        /* Adiciona espaçamento para evitar que o conteúdo fique escondido por trás da navbar fixa */
+        body {
+            padding-top: 80px;
+        }
+        
+        .gallery-img {
+            height: 200px; /* Altura fixa */
+            width: 100%;   /* Largura ajustada ao container */
+            object-fit: cover; /* Ajusta a imagem sem distorcer */
+        }
+
+        .treinadores-img {
+    height: 200px; /* Altura fixa */
+    width: 200px;   /* Largura ajustada ao container */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+}
+.full-height {
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    display: flex; /* Alinha o conteúdo verticalmente */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente (opcional) */
+}
+
+        </style>
+    
+</head>
+<body>
+
+    <!-- Navegação Fixa no Topo -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Academia Fitness</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planos">Planos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Full-Height -->
+    <section class="full-height bg-primary">
+        <div class="container text-center">
+            <h2>Transforme sua vida com a Academia Fitness</h2>
+            <p class="text-white lead">Treinos exclusivos, acompanhamento de profissionais e muito mais para você conquistar seus objetivos!</p>
+            <a href="#planos" class="btn btn-light">Veja nossos planos</a>
+        </div>
+    </section>
+
+    <section id="planos" class="bg-light py-5 full-height">
+        <div class="container text-center">
+            <h2 class="mb-5">Nossos Planos</h2>
+            <div class="row">
+                <!-- Plano Básico -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+                        <img src="https://w7academia.com.br/wp-content/uploads/2023/05/W7ACADEMIATIJUCAS_PorqueimportantetreinaremumaAcademiacomequipamentosdequalidade-768x432.png" class="card-img-top" alt="Plano Básico">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fs-4 fw-bold">Plano Básico</h5>
+                            <p class="card-text text-muted">Acesso ao horário comercial</p>
+                            <p class="fw-bold fs-3">R$ 99/mês</p>
+                            <a href="#" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#planoModal" data-plano="Plano Básico">Assinar</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Plano Plus -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+                        <img src="https://w7academia.com.br/wp-content/uploads/2023/05/W7ACADEMIATIJUCAS_PorqueimportantetreinaremumaAcademiacomequipamentosdequalidade-768x432.png" class="card-img-top" alt="Plano Plus">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fs-4 fw-bold">Plano Plus</h5>
+                            <p class="card-text text-muted">Acesso 24 horas e aulas em grupo</p>
+                            <p class="fw-bold fs-3">R$ 149/mês</p>
+                            <a href="#" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#planoModal" data-plano="Plano Plus">Assinar</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Plano VIP -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+                        <img src="https://w7academia.com.br/wp-content/uploads/2023/05/W7ACADEMIATIJUCAS_PorqueimportantetreinaremumaAcademiacomequipamentosdequalidade-768x432.png" class="card-img-top" alt="Plano VIP">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fs-4 fw-bold">Plano VIP</h5>
+                            <p class="card-text text-muted">Personal Trainer exclusivo</p>
+                            <p class="fw-bold fs-3">R$ 299/mês</p>
+                            <a href="#" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#planoModal" data-plano="Plano VIP">Assinar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Modal -->
+    <div class="modal fade" id="planoModal" tabindex="-1" aria-labelledby="planoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="planoModalLabel">Assinar Plano</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="planoForm">
+                        <div class="mb-3">
+                            <label for="planoName" class="form-label">Plano</label>
+                            <input type="text" class="form-control" id="planoName" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Enviar via WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  
+    
+
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Sobre a Academia Fitness</h2>
+            <p class="lead text-center">A Academia Fitness oferece um ambiente acolhedor e profissional, ideal para quem busca melhorar sua saúde e qualidade de vida. Nossa missão é ajudar você a alcançar seus objetivos com treinos personalizados e acompanhamento especializado.</p>
+            <p class="text-center">Com equipamentos modernos e uma equipe de profissionais altamente qualificados, a Academia Fitness é o lugar perfeito para quem deseja um treino eficiente, com resultados comprovados.</p>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Entre em Contato</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Nos envie uma mensagem</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Seu email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="mensagem" rows="4" placeholder="Sua mensagem"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Nosso Endereço</h4>
+                    <p><strong>Academia Fitness</strong></p>
+                    <p>Rua Exemplo, 123 - Bairro Fitness</p>
+                    <p>Cidade, Estado, CEP: 00000-000</p>
+                    <p>Telefone: (00) 1234-5678</p>
+                    <p>Email: <a href="mailto:contato@academiafitness.com">contato@academiafitness.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Academia Fitness. Todos os direitos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById("planoModal");
+            const planoInput = document.getElementById("planoName");
+            const form = document.getElementById("planoForm");
+    
+            // Preencher o nome do plano ao abrir o modal
+            modal.addEventListener("show.bs.modal", (event) => {
+                const button = event.relatedTarget; // Botão que abriu o modal
+                const plano = button.getAttribute("data-plano"); // Nome do plano
+                planoInput.value = plano;
+            });
+    
+            // Enviar formulário para WhatsApp
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+    
+                const nome = document.getElementById("nome").value.trim();
+                const telefone = document.getElementById("telefone").value.trim();
+                const plano = planoInput.value;
+    
+                if (!nome || !telefone) {
+                    alert("Por favor, preencha todos os campos.");
+                    return;
+                }
+    
+                const whatsappNumber = "5582999185536"; // Substitua pelo número do WhatsApp
+                const mensagem = `Olá, meu nome é ${nome}. Gostaria de assinar o ${plano}. Meu telefone é ${telefone}.`;
+    
+                const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensagem)}`;
+                window.open(url, "_blank");
+            });
+        });
+    </script></body>
+</html>
